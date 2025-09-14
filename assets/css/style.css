@@ -1,0 +1,748 @@
+@charset "UTF-8";
+@import url("bootstrap.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@font-face {
+    font-family: "Blackline";
+    src: url("../font/Blackline.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Fonphoria";
+    src: url("../font/Fonphoria.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Marginal";
+    src: url("../font/Marginal.otf") format("opentype");
+}
+
+body {
+    font-family: Fonphoria;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 0;
+    opacity: 1;
+}
+
+/* -------------------- BTN -------------------- */
+
+.btn-volume {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 20px;
+    background: transparent;
+    width: 40px;
+    z-index: 999;
+}
+
+.putar-kiri {
+    -moz-animation: rota-full-left 10s infinite linear;
+    -webkit-animation: rota-full-left 10s infinite linear;
+}
+@-moz-keyframes rota-full-left {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes rota-full-left {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.btn {
+    font-family: Marginal;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+    --bs-btn-disabled-color: #fff;
+}
+
+.btn-light {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-hover-color: var(--bs-primary);
+    --bs-btn-active-color: var(--bs-primary);
+    --bs-btn-disabled-color: var(--bs-primary);
+}
+
+.form-control {
+    border: var(--bs-border-width) solid var(--bs-primary);
+}
+.form-select {
+    border: var(--bs-border-width) solid var(--bs-primary);
+}
+
+/* -------------------- Display -------------------- */
+
+.display-hide {
+    display: none;
+}
+
+/* -------------------- Pane Page -------------------- */
+
+.primary-pane {
+    overflow: hidden;
+    background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url(../img/primary-pane.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 61%;
+}
+
+.secondary-pane {
+    position: static;
+    right: 0;
+    background: var(--bs-body-bg);
+    width: 39%;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .primary-pane {
+        position: relative;
+        width: 100%;
+        display: none;
+    }
+
+    .secondary-pane {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* -------------------- Top Cover -------------------- */
+
+section.top-cover {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    transition: all 1.8s;
+    transition-timing-function: cubic-bezier(0.23, 0.56, 0.38, 0.78);
+    -webkit-transition-timing-function: cubic-bezier(0.23, 0.56, 0.38, 0.78);
+    -moz-transition-timing-function: cubic-bezier(0.23, 0.56, 0.38, 0.78);
+    -o-transition-timing-function: cubic-bezier(0.23, 0.56, 0.38, 0.78);
+}
+
+.top-cover.hide {
+    top: -120%;
+    pointer-events: none;
+}
+
+.top-cover > .inner {
+    position: static;
+    background-image: linear-gradient(
+            180deg,
+            rgba(0, 4, 10, 0.36) 68%,
+            #000c0f 100%
+        ),
+        url(../img/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 39%;
+    height: 100vh;
+    right: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+.top-cover > .inner p {
+    font-size: 16px;
+    color: var(--bs-white);
+    font-family: Fonphoria;
+    font-weight: 500;
+}
+
+.top-cover > .inner h2 {
+    font-size: 18px;
+    color: var(--bs-white);
+    font-family: Fonphoria;
+    font-weight: 500;
+}
+
+.top-cover > .inner h1 {
+    font-family: Marginal;
+    font-size: 30px;
+    color: var(--bs-white);
+}
+
+@media only screen and (max-width: 1024px) {
+    .top-cover > .inner {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* -------------------- section content -------------------- */
+
+#header {
+    position: relative;
+    overflow: hidden;
+}
+
+#header .swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+#header .swiper-slide {
+    transition-timing-function: linear;
+}
+
+#header .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#header .header-inner {
+    position: absolute;
+    width: 100%;
+    padding: 5rem 0;
+    inset: 0;
+    z-index: 2;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(var(--bs-dark-rgb), 1) 10%,
+        rgba(255, 255, 255, 0) 50%
+    );
+}
+
+#header .header-title {
+    padding: 30px 0;
+}
+
+#header .header-title p {
+    font-family: Fonphoria;
+    color: var(--bs-white);
+    font-size: 1rem;
+}
+
+#header .header-title h1 {
+    font-family: Blackline;
+    font-size: 4rem;
+    color: var(--bs-white);
+    margin-bottom: 8px;
+}
+
+#header .header-title hr {
+    border-top: 2px solid var(--bs-white);
+    width: 50px;
+    margin: 16px auto 16px auto;
+}
+
+.countdown {
+    overflow: hidden;
+    padding: 0 16px;
+}
+
+.countdown .box-countdown {
+    background: transparent;
+    width: 100%;
+    padding: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    text-align: center;
+}
+
+.countdown .value span {
+    font-size: 20px;
+    color: var(--bs-white);
+}
+
+.countdown .label {
+    font-size: 14px;
+    color: var(--bs-white);
+}
+
+/* ---------------------------------------- */
+
+#about {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+#about {
+    font-size: 16px;
+}
+
+/* ---------------------------------------- */
+
+#couple {
+    position: relative;
+    overflow: hidden;
+}
+
+#couple .bride {
+    position: relative;
+    overflow: hidden;
+}
+
+#couple .groom {
+    position: relative;
+    overflow: hidden;
+}
+
+#couple .swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+#couple .swiper-slide {
+    transition-timing-function: linear;
+}
+
+#couple .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#couple .couple-inner {
+    position: absolute;
+    width: 100%;
+    padding: 4rem 0;
+    inset: 0;
+    z-index: 2;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(var(--bs-secondary-rgb), 1) 10%,
+        rgba(255, 255, 255, 0) 50%
+    );
+}
+
+#couple .couple-inner hr {
+    border-width: 3px;
+}
+
+#couple .couple-inner h1 {
+    font-family: Marginal;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#couple .couple-inner h2 {
+    font-family: Marginal;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#couple .couple-inner p {
+    font-size: 16px;
+}
+
+#couple h3 {
+    font-family: Blackline;
+    font-size: 3rem;
+}
+
+/* ---------------------------------------- */
+
+#weddingDate {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+#weddingDate h1 {
+    font-family: Blackline;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#weddingDate .savethedate {
+    position: relative;
+    overflow: hidden;
+}
+
+#weddingDate .savethedate .swiper {
+    width: 100%;
+    height: 70vh;
+}
+
+#weddingDate .savethedate .swiper-slide {
+    transition-timing-function: linear;
+}
+
+#weddingDate .savethedate .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#weddingDate .savethedate .savethedate-inner {
+    position: absolute;
+    width: 100%;
+    padding: 2rem 0;
+    inset: 0;
+    z-index: 2;
+    height: 70vh;
+    background: linear-gradient(
+        0deg,
+        rgba(var(--bs-secondary-rgb), 1) 10%,
+        rgba(255, 255, 255, 0) 50%
+    );
+}
+
+#weddingDate h2 {
+    font-family: Marginal;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#weddingDate h3 {
+    font-size: 22px;
+}
+
+#weddingDate h4 {
+    font-size: 20px;
+}
+
+#weddingDate p {
+    font-size: 16px;
+}
+
+#weddingDate img {
+    width: 70px;
+    margin-bottom: 1rem;
+}
+
+/* ---------------------------------------- */
+
+#rsvp {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+#rsvp h1 {
+    font-family: Marginal;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#rsvp hr {
+    border-width: 3px;
+}
+
+#rsvp .rsvp-item p {
+    font-size: 16px;
+    text-align: center;
+}
+
+#rsvp .card {
+    border: 1px solid var(--bs-primary);
+    text-align: center;
+}
+
+#rsvp .card i {
+    font-size: 28px;
+}
+
+#rsvp .card h4 {
+    font-family: Fonphoria;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#rsvp .label-spinner {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ---------------------------------------- */
+
+#weddingWishes {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+#weddingWishes h1 {
+    font-family: Marginal;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#weddingWishes hr {
+    border-width: 3px;
+}
+
+#weddingWishes p {
+    font-size: 14px;
+    text-align: center;
+}
+
+#weddingWishes .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--bs-primary);
+}
+
+#weddingWishes .card .card-body {
+    padding: 0 1rem 1rem 1rem;
+}
+
+#weddingWishes .comment {
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 32px 0;
+    max-height: 80vh;
+}
+
+#weddingWishes .comment .list-group-item {
+    padding: 0.5rem 0.75rem;
+    background-color: transparent;
+    border: 0px;
+    margin-bottom: 12px;
+}
+
+#weddingWishes .comment .list-group-item h5 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+#weddingWishes .comment .list-group-item p {
+    font-size: 16px;
+    text-align: left;
+}
+
+#weddingWishes .comment .list-group-item small {
+    font-size: 12px;
+    align-self: center !important;
+}
+
+/* ---------------------------------------- */
+
+#weddingGift {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    text-align: center;
+}
+
+#weddingGift .row i {
+    font-size: 50px;
+}
+
+#weddingGift h1 {
+    font-family: Marginal;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#weddingGift span {
+    font-size: 48px;
+}
+
+#weddingGift p {
+    font-size: 16px;
+}
+
+#giftModal .modal-header {
+    border-bottom: 0;
+}
+
+#giftModal .modal-body {
+    padding: 0 30px 30px 30px;
+}
+
+#giftModal .modal-body h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#giftModal .modal-body .card {
+    background-image: linear-gradient(125deg, #ffffff 0%, #d1d1d1 100%);
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    border-width: 0px;
+    box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 8%);
+}
+
+#giftModal .modal-body .card .card-body {
+    padding: 30px 0;
+    text-align: center;
+}
+
+#giftModal .modal-body .card h5 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#giftModal .modal-body .card p {
+    font-size: 12px;
+}
+
+#walletModal .modal-header {
+    border-bottom: 0;
+}
+
+#walletModal .modal-body {
+    padding: 0 30px 30px 30px;
+}
+
+#walletModal .modal-body h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#walletModal .modal-body .card {
+    background-image: linear-gradient(125deg, #ffffff 0%, #d1d1d1 100%);
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    border-width: 0px;
+    box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 8%);
+}
+
+#walletModal .modal-body .card .card-body {
+    padding: 30px 16px;
+    text-align: center;
+}
+
+#walletModal .modal-body .card img {
+    height: 60px;
+    margin-bottom: 8px;
+}
+
+#walletModal .modal-body .card h5 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+#walletModal .modal-body .card p {
+    font-size: 18px;
+}
+
+/* ---------------------------------------- */
+
+#gallery {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+#gallery h1 {
+    font-family: Marginal;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#gallery hr {
+    border-width: 3px;
+}
+
+/* ---------------------------------------- */
+
+#tankyou {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+#tankyou h1 {
+    font-family: Marginal;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#tankyou hr {
+    border-width: 3px;
+}
+
+#tankyou p {
+    font-size: 16px;
+    text-align: center;
+}
+
+#tankyou .swiper {
+    width: 100%;
+    height: 300px;
+}
+
+#tankyou .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#tankyou h2 {
+    font-family: Blackline;
+    font-size: 4rem;
+    text-align: right;
+}
+
+/* ---------------------------------------- */
+
+.page-footer {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bs-white);
+    padding: 12px 0;
+}
+
+.page-footer img {
+    height: 30px;
+}
+
+.page-footer p {
+    font-size: 12px;
+    color: #000;
+}
