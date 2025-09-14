@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>kollera</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://rustiandi.github.io/favicon-assets/favicon-32x32.png"
+            sizes="32x32"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <section class="top-cover">
+            <div class="inner">
+                <div>
+                    <p>Dear,</p>
+                    <h2>Nama Tamu</h2>
+                    <p>You Are Invited!</p>
+                </div>
+                <div class="mb-5">
+                    <p class="mb-2">The Wedding Celebration of</p>
+                    <h1>Vhirra & Gessa</h1>
+                    <div class="d-grid px-5 mt-3">
+                        <button
+                            class="btn btn-light"
+                            onclick="startTheJourney()"
+                        >
+                            <i class="bi bi-envelope-open-heart"></i>
+                            Open Invitation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <audio id="myAudio" loop>
+            <source src="assets/musik/MapsinFrench.mp3" type="audio/mpeg" />
+        </audio>
+        <section class="primary-pane"></section>
+        <section class="secondary-pane">
+            <section id="header">
+                <div
+                    class="header-inner d-flex flex-column justify-content-end"
+                >
+                    <div class="container">
+                        <div class="header-title">
+                            <h1>Vhirra & Gessa</h1>
+                            <p>
+                                "Two souls with but a single thought, two hearts
+                                that beat as one."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="countdown">
+                        <div class="d-flex flex-row justify-content-around">
+                            <div class="box-countdown">
+                                <p class="value"><span id="days">00</span></p>
+                                <p class="label">Day</p>
+                            </div>
+                            <div class="box-countdown">
+                                <p class="value"><span id="hours">00</span></p>
+                                <p class="label">Hrs</p>
+                            </div>
+                            <div class="box-countdown">
+                                <p class="value">
+                                    <span id="minutes">00</span>
+                                </p>
+                                <p class="label">Min</p>
+                            </div>
+                            <div class="box-countdown">
+                                <p class="value">
+                                    <span id="seconds">00</span>
+                                </p>
+                                <p class="label">Sec</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper headerSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/header1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/header2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/header3.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="container text-center">
+                    <p data-aos="fade-up">
+                        “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                        menciptakan pasangan-pasangan untukmu dari jenismu
+                        sendiri, agar kamu cenderung dan merasa tenteram
+                        kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+                        sayang. Sungguh, pada demikian itu benar-benar terdapat
+                        tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
+                        <br />
+                        <br />
+                        (QS. Ar-Rum ayat 21)
+                    </p>
+                </div>
+            </section>
+            <section id="couple">
+                <div class="bide">
+                    <div
+                        class="couple-inner d-flex flex-column justify-content-end"
+                    >
+                        <div class="container">
+                            <div class="row mb-5">
+                                <div
+                                    class="col-7 align-self-center"
+                                    data-aos="fade-right"
+                                >
+                                    <hr />
+                                </div>
+                                <div
+                                    class="col-5 text-end align-self-center"
+                                    data-aos="fade-left"
+                                >
+                                    <h1>
+                                        The
+                                        <br />
+                                        Bride
+                                    </h1>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="mb-3" data-aos="fade-up">
+                                    Vhirra Aisya Djuharjana
+                                </h2>
+                                <p class="mb-4" data-aos="fade-up">
+                                    Putri dari Bapak Nama Bapak & Ibu Nama Ibu
+                                </p>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-primary btn-sm"
+                                    data-aos="fade-up"
+                                >
+                                    <i class="bi bi-instagram"></i>
+                                    @nama ig
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper headerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/bride1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/bride2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/bride3.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5 pt-3 text-center">
+                    <h3 data-aos="zoom-in">Dengan</h3>
+                </div>
+                <div class="groom">
+                    <div
+                        class="couple-inner d-flex flex-column justify-content-end"
+                    >
+                        <div class="container">
+                            <div class="row mb-5">
+                                <div
+                                    class="col-5 align-self-center"
+                                    data-aos="fade-right"
+                                >
+                                    <h1>
+                                        The
+                                        <br />
+                                        Groom
+                                    </h1>
+                                </div>
+                                <div
+                                    class="col-7 align-self-center"
+                                    data-aos="fade-left"
+                                >
+                                    <hr />
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="mb-3" data-aos="fade-up">
+                                    Gessa Dhitalaya Putra
+                                </h2>
+                                <p class="mb-4" data-aos="fade-up">
+                                    Putra dari Bapak Nama Bapak & Ibu Nama Ibu
+                                </p>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-primary btn-sm"
+                                    data-aos="fade-up"
+                                >
+                                    <i class="bi bi-instagram"></i>
+                                    @nama ig
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper headerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/groom1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/groom2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/groom3.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="weddingDate">
+                <h1 data-aos="zoom-in">Save The Date</h1>
+                <div class="savethedate">
+                    <div
+                        class="savethedate-inner d-flex flex-column justify-content-end"
+                    >
+                        <div class="container text-center">
+                            <a
+                                href="#"
+                                class="btn btn-outline-primary"
+                                data-aos="zoom-in"
+                            >
+                                Save The Date
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper headerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/date1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/date2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/date3.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="mb-5">
+                        <img src="assets/img/cincin.svg" data-aos="zoom-in" />
+                        <h2 data-aos="fade-up">Akad Nikah</h2>
+                        <h3 data-aos="fade-up">Sabtu 11 Oktober 2024</h3>
+                        <h4 data-aos="fade-up">08.00 WIB - selesai</h4>
+                    </div>
+                    <div class="mb-5">
+                        <img src="assets/img/calander.svg" data-aos="zoom-in" />
+                        <h2 data-aos="fade-up">Resepsi</h2>
+                        <h3 data-aos="fade-up">Sabtu 11 Oktober 2024</h3>
+                        <h4 data-aos="fade-up">11.00 – 14.00 WIB</h4>
+                    </div>
+                    <div class="px-2">
+                        <h4 data-aos="zoom-in">Gedung SOPO Sulaksana</h4>
+                        <p class="mb-3" data-aos="zoom-in">
+                            Jl. Sekolah Internasional No.52, Cicaheum, Kec.
+                            Kiaracondong, Kota Bandung, Jawa Barat 40282
+                        </p>
+                        <a
+                            href="https://maps.app.goo.gl/DqDsEvau2vRuijt6A"
+                            class="btn btn-outline-secondary btn-sm"
+                            data-aos="zoom-in"
+                        >
+                            <i class="bi bi-pin-map"></i>
+                            Google Maps
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rsvp">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div
+                            class="col-7 align-self-center"
+                            data-aos="fade-right"
+                        >
+                            <hr />
+                        </div>
+                        <div
+                            class="col-5 text-end align-self-centerss"
+                            data-aos="fade-left"
+                        >
+                            <h1>RSVP</h1>
+                        </div>
+                    </div>
+                    <div class="rsvp-item">
+                        <p data-aos="fade-up">
+                            Kami tidak sabar menunggu hari pernikahan kami
+                            bersama Bapak/Ibu/Saudara/i, mohon konfirmasi
+                            kehadiran Bapak/Ibu/Saudara/i. Terima kasih.
+                        </p>
+                        <form class="form-rsvp mt-4" data-aos="fade-up">
+                            <div class="form-notif mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nameGuest"
+                                    placeholder="Nama Lengkap"
+                                />
+                            </div>
+                            <div class="form-notif mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="addressGuest"
+                                    placeholder="Alamat"
+                                />
+                            </div>
+                            <div class="form-notif mb-3">
+                                <select
+                                    class="form-select"
+                                    id="selectRsvp"
+                                    name="select_rsvp"
+                                    onchange="konfirmRsvp(this.value)"
+                                >
+                                    <option selected disabled value="">
+                                        Kehadiran?
+                                    </option>
+                                    <option value="Konfirmasi">
+                                        Ya, Saya akan hadir
+                                    </option>
+                                    <option value="Tidak">
+                                        Maaf tidak bisa
+                                    </option>
+                                </select>
+                            </div>
+                            <div
+                                class="group-spiner text-center mb-3 display-hide"
+                            >
+                                <label class="mb-1 label-spinner">
+                                    Jumlah tamu yang datang termasuk kamu?
+                                </label>
+                                <div class="input-group form-spinner">
+                                    <button
+                                        class="btn btn-outline-primary btn-decrement"
+                                        type="button"
+                                    >
+                                        -
+                                    </button>
+                                    <input
+                                        type="text"
+                                        class="form-control text-center"
+                                        data-type="number"
+                                        step="1"
+                                        max="99"
+                                        min="1"
+                                        value="1"
+                                        readonly="readonly"
+                                        id="spinner1"
+                                    />
+                                    <button
+                                        class="btn btn-outline-primary btn-increment"
+                                        type="button"
+                                    >
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                            <input
+                                type="hidden"
+                                id="idGuest"
+                                name="id_guest"
+                                value="<?= $guest_id; ?>"
+                            />
+                            <div class="d-flex justify-content-end">
+                                <button
+                                    class="btn btn-outline-primary"
+                                    type="button"
+                                    id="send_rsvp"
+                                >
+                                    Kirim
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="weddingGift">
+                <div class="container">
+                    <div class="row">
+                        <div
+                            class="col-8 align-self-center"
+                            data-aos="fade-right"
+                        >
+                            <hr />
+                        </div>
+                        <div
+                            class="col-4 text-center align-self-center"
+                            data-aos="zoom-in"
+                        >
+                            <i class="bi bi-quote"></i>
+                        </div>
+                    </div>
+                    <h1 class="text-start mb-4" data-aos="fade-right">
+                        Wedding
+                        <br />
+                        Gift
+                    </h1>
+                    <span><i class="bi bi-gift"></i></span>
+                    <p data-aos="fade-up">
+                        Bagi keluarga dan sahabat yang ingin mengirimkan hadiah,
+                        silahkan mengirimkannya melalui tautan berikut:
+                    </p>
+                    <div class="d-flex justify-content-evenly mt-3">
+                        <button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#giftModal"
+                            data-aos="zoom-in"
+                        >
+                            <i class="bi bi-gift"></i>
+                            Kirim Hadiah
+                        </button>
+                        <button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#walletModal"
+                            data-aos="zoom-in"
+                        >
+                            <i class="bi bi-wallet"></i>
+                            Transfer Bank
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section id="gallery">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div
+                            class="col-7 align-self-center"
+                            data-aos="fade-right"
+                        >
+                            <hr />
+                        </div>
+                        <div
+                            class="col-5 text-end align-self-centerss"
+                            data-aos="fade-left"
+                        >
+                            <h1>
+                                Our
+                                <br />
+                                Gallery
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div
+                        class="gallery-container mt-3"
+                        id="animated-thumbnails-gallery"
+                    >
+                        <a
+                            class="gallery-item"
+                            data-src="assets/img/gall-01.jpg"
+                            data-aos="fade-up"
+                        >
+                            <img
+                                class="img-responsive"
+                                src="assets/img/gall-01.jpg"
+                            />
+                        </a>
+                        <a
+                            class="gallery-item"
+                            data-src="assets/img/gall-02.jpg"
+                            data-aos="fade-up"
+                        >
+                            <img
+                                class="img-responsive"
+                                src="assets/img/gall-02.jpg"
+                            />
+                        </a>
+                        <a
+                            class="gallery-item"
+                            data-src="assets/img/gall-03.jpg"
+                            data-aos="fade-up"
+                        >
+                            <img
+                                class="img-responsive"
+                                src="assets/img/gall-03.jpg"
+                            />
+                        </a>
+                        <a
+                            class="gallery-item"
+                            data-src="assets/img/gall-04.jpg"
+                            data-aos="fade-up"
+                        >
+                            <img
+                                class="img-responsive"
+                                src="assets/img/gall-04.jpg"
+                            />
+                        </a>
+                        <a
+                            class="gallery-item"
+                            data-src="assets/img/gall-05.jpg"
+                            data-aos="fade-up"
+                        >
+                            <img
+                                class="img-responsive"
+                                src="assets/img/gall-05.jpg"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="weddingWishes">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div
+                            class="col-5 text-end align-self-centerss"
+                            data-aos="fade-right"
+                        >
+                            <h1>Wishes</h1>
+                        </div>
+                        <div
+                            class="col-7 align-self-center"
+                            data-aos="fade-left"
+                        >
+                            <hr />
+                        </div>
+                    </div>
+                    <p class="mb-3">Tulis pesan untuk kami…</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <form
+                                class="mt-3"
+                                id="form-wishes"
+                                data-aos="zoom-in"
+                            >
+                                <div class="form-notif mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nameWishes"
+                                        placeholder="Nama Kamu"
+                                    />
+                                </div>
+                                <div class="form-notif mb-3">
+                                    <textarea
+                                        class="form-control"
+                                        placeholder="Ucapan & Do'a"
+                                        id="wishes"
+                                        rows="4"
+                                    ></textarea>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button
+                                        class="btn btn-outline-primary"
+                                        type="button"
+                                        id="send_wishes"
+                                    >
+                                        Kirim
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="list-group" id="show_wishes">
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Revolin Nasution</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Semoga kelak menjadi keluarga Sakinnah,
+                                    Mawaddah, Warohmah بَارَكَ اللَّهُ لَكَ
+                                    وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِيْ
+                                    خَيْرٍ Baarokallaahu laka wa baaroka 'alaika
+                                    wa jama'a bainakumaa fii khoirin.
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Adi pw</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Baarakallahu laka, wa baaraka ‘alaika wa
+                                    jama’a aynakumaa fii khair. Samawa....
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Tomy H</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Turut Bahagia Teh Uci n Om Bambang, selamat
+                                    menepuh hidup yg baru, semoga menjadi kelg
+                                    yg samawa &amp; bahagia dunya akherat....
+                                    Aamiin Yra
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Yuda</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Baarakallahu laka, wa baaraka ‘alaika wa
+                                    jama’a aynakumaa fii khair. (semoga Allah
+                                    memberikan berkah kepadamu, semoga Allah
+                                    mencurahkan keberkahan kepadamu dan semoga
+                                    Allah mempersatukan kalian berdua dalam
+                                    kebaikan)
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Nana</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Semoga sakinah mawadah warahmah until
+                                    Jannah...aamiin
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Hansen</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Selamat ya, Semoga acaranya berjalan dengan
+                                    baik dan sukses dan Semoga juga hubungan-nya
+                                    langgeng sampai semua yang dicita-citakan
+                                    dapat terwujud...Amin
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div
+                                    class="d-flex w-100 justify-content-between"
+                                >
+                                    <h5>Hendra</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p>
+                                    Selamat menempuh hidup baru my sister Uchi
+                                    dan Kang Rino semoga langgeng, sakinah,
+                                    mawaddah, warohmah, selalu dalam lindungan
+                                    dan keberkahan Allah, bahagia selalu, Aamiin
+                                    🤲
+                                </p>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="tankyou">
+                <div class="container mb-3">
+                    <div class="row mb-5">
+                        <div
+                            class="col-7 align-self-center"
+                            data-aos="fade-right"
+                        >
+                            <hr />
+                        </div>
+                        <div
+                            class="col-5 text-end align-self-centerss"
+                            data-aos="fade-left"
+                        >
+                            <h1>
+                                Terima
+                                <br />
+                                Kasih
+                            </h1>
+                        </div>
+                    </div>
+                    <p data-aos="zoom-in">
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                        apabila Bapak/Ibu/Saudara/i berkenan hadir untuk
+                        memberikan doa restu kepada kami. Atas kehadiran dan doa
+                        restunya, kami sampaikan terima kasih.
+                    </p>
+                </div>
+                <div class="swiper mySwiper mb-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/tankyou1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/tankyou2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/tankyou3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/tankyou4.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2 data-aos="fade-left">Vhirra & Gessa</h2>
+                </div>
+            </section>
+            <footer class="page-footer">
+                <div class="container d-flex flex-row justify-content-center">
+                    <p class="align-self-center mr-2">Made with ♥ by</p>
+                    <img
+                        src="https://rustiandi.github.io/favicon-assets/logo.png"
+                    />
+                </div>
+            </footer>
+        </section>
+        <div
+            class="modal fade"
+            id="giftModal"
+            tabindex="-1"
+            aria-labelledby="giftModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            type="button"
+                            class="btn-close text-light"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Alamat Penerima</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>
+                                    Vhirra Aisya
+                                    <br />
+                                    0896xxxxx
+                                </h5>
+                                <p id="addressGift">
+                                    Jl. Alamat kamu No. 99B (155/987) RT. 09/09
+                                </p>
+                                <button
+                                    onclick="copyText('addressGift')"
+                                    class="btn btn-primary btn-sm mt-2"
+                                    type="button"
+                                >
+                                    <i class="bi bi-clipboard"></i>
+                                    Copy Address
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="walletModal"
+            tabindex="-1"
+            aria-labelledby="walletModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            type="button"
+                            class="btn-close text-light"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Nomor Rekening</h4>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="text-end">
+                                    <img src="assets/img/bca.png" />
+                                </div>
+                                <h5>Vhirra</h5>
+                                <p id="bcaWallet1">83803xxxxx</p>
+                                <button
+                                    onclick="copyText('bcaWallet1')"
+                                    class="btn btn-primary btn-sm mt-2"
+                                    type="button"
+                                >
+                                    <i class="bi bi-clipboard"></i>
+                                    Copy Number
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a onclick="invitationAudio()" class="btn-volume">
+            <img
+                src="https://rustiandi.github.io/favicon-assets/disc.png"
+                width="100%"
+            />
+        </a>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/zoom/lg-zoom.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="assets/js/jquery.arctext.js"></script>
+        <script src="assets/js/spinner.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            function startTheJourney() {
+                $(".top-cover").addClass("hide");
+                $("body").css("overflow", "visible");
+                invitationAudio();
+                setTimeout(function () {
+                    $(".top-cover").remove();
+                }, 3000);
+            }
+
+            var swiper = new Swiper(".headerSwiper", {
+                loop: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
+                },
+            });
+
+            var swiper2 = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+                freeMode: true,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                speed: 5000,
+            });
+
+            var swiper3 = new Swiper(".coupleSwiper2", {
+                loop: true,
+                autoplay: {
+                    delay: 0,
+                    reverseDirection: false,
+                    disableOnInteraction: true,
+                },
+                speed: 5000,
+            });
+        </script>
+    </body>
+</html>
